@@ -1,5 +1,4 @@
 #include <net/net.h>
-#include <string.h>
 #include <lib/klib.h>
 #include <lib/cio.h>
 
