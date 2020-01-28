@@ -67,7 +67,7 @@ QEMUHARDFLAGS := $(QEMUFLAGS)          \
 	-debugcon stdio                    \
 	# -netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no -device rtl8139,netdev=mynet0
 
-.PHONY: symlist all prepare build install uninstall clean run
+.PHONY: symlist all prepare build install uninstall clean run format
 
 all: $(LAI_DIR)
 ifeq ($(PULLREPOS), true)
@@ -118,3 +118,7 @@ clean:
 
 run:
 	$(QEMU) $(QEMUHARDFLAGS)
+
+format:
+	find -not -path "./acpi/lai/*" -type f  -name "*.h" -exec clang-format -style=file -i {} \;
+	find -not -path "./acpi/lai/*" -type f  -name "*.c" -exec clang-format -style=file -i {} \;

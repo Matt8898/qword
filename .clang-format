@@ -1,0 +1,14 @@
+﻿---
+AccessModifierOffset: '0'
+AlignConsecutiveMacros: 'true'
+AlignEscapedNewlines: Left
+AlignOperands: 'true'
+AlignTrailingComments: 'true'
+IndentWidth: '4'
+Language: Cpp
+SpaceBeforeParens: ControlStatements
+SpacesInCStyleCastParentheses: 'false'
+SpacesInSquareBrackets: 'false'
+TabWidth: '4'
+
+...
